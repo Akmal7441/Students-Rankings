@@ -1,0 +1,59 @@
+<div class="container">
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">№</th>
+        <th scope="col">Firstname</th>
+        <th scope="col">Lastname</th>
+        <th scope="col">Group</th>
+        <th scope="col">Number</th>
+        <th scope="col">Month</th>
+        <th scope="col">Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each students}}
+        <form action="/update/{{_id}}" method="POST">
+          <tr>
+            <th scope="row" class="nomer"></th>
+            <td><input
+                type="text"
+                name="FirstName"
+                id=""
+                value={{FirstName}}
+              /></td>
+            <td><input
+                type="text"
+                name="LastName"
+                id=""
+                value={{LastName}}
+              /></td>
+            <td><input type="text" name="Group" id="" value={{Group}} /></td>
+            <td><input
+                type="number"
+                name="Number"
+                id=""
+                value={{Number}}
+              /></td>
+            <td><input type="number" name="Month" id="" value={{Month}} /></td>
+            <td><input type="number" name="Score" id="" value={{Score}} /></td>
+            <td><button
+                type="submit"
+                class="btn btn-primary"
+              >Edit</button></td>
+
+          </tr>
+        </form>
+      {{/each}}
+
+    </tbody>
+  </table>
+
+  <a class="btn btn-success" href="/add/addStudent">Add Student</a>
+</div>
+
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+  integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+  crossorigin="anonymous"
+></script>
